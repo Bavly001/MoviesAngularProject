@@ -1,0 +1,4 @@
+.image-error{
+      filter: invert(100%) contrast(2);
+      mix-blend-mode: screen;
+}

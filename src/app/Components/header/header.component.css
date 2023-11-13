@@ -1,0 +1,14 @@
+.header {
+  height: var(--header-height);
+  z-index: 5;
+}
+.header-container {
+  backdrop-filter: grayscale(100%) blur(3px);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.header-popup {
+  animation: popup 1s ease-in-out;
+}
+.header-appear {
+  animation: appear 2s ease-in-out;
+}

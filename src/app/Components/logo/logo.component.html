@@ -1,0 +1,11 @@
+<div
+  class="rounded-circle text-center text-light d-flex justify-content-center align-items-center flex-column border border-2"
+  [ngClass]="'border-' + borderColor" [ngStyle]="{'width': size + 'px','height': size + 'px'}">
+  <h1 class="text-uppercase m-0 fw-light" [ngClass]="'fs-' + fontSize + ' text-' + textColor ">Movies</h1>
+  <h1 class="fw-bold text-uppercase m-0" [ngClass]="'fs-' + (fontSizeNumber + 1) + ' text-' + textColor ">World <sup>
+      <mat-icon><span class="material-symbols-outlined"
+          [ngClass]="' text-' + borderColor">
+          hive
+        </span></mat-icon>
+    </sup></h1>
+</div>

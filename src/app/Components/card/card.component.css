@@ -1,0 +1,61 @@
+.img-frame {
+  width: 350px;
+  height: 400px;
+  transition: 1s;
+}
+.blurred-img {
+  height: 200%;
+  filter: blur(10px);
+  opacity: 0.1;
+  rotate: -45deg;
+  transition: 1s;
+}
+.card {
+  height: 570px;
+}
+.title {
+  transition: 1s;
+}
+.description {
+  bottom: -410px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  transition: 1s;
+  width: 125%;
+  padding: 0 55px;
+}
+.card:hover .blurred-img {
+  height: 100%;
+  rotate: 0deg;
+  filter: blur(0);
+}
+.card:hover .img-frame {
+  opacity: 0;
+  transform: translateY(-400px);
+}
+.card:hover .description {
+  bottom: 0;
+}
+.card:hover .title {
+  transform: translateY(-400px);
+}
+.scale-up {
+  animation: scale-up 1.2s ease-in-out;
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+    z-index: 4;
+  }
+  100% {
+    transform: scale(1000%);
+    filter: blur(20px) brightness(-100%);
+    z-index: 4;
+    rotate: 90deg;
+  }
+}

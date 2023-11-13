@@ -1,0 +1,18 @@
+.rotated {
+  rotate: 45deg;
+}
+.popup {
+  animation: img-popup var(--animation-time) infinite ease-in-out;
+}
+@keyframes img-popup {
+  0% {
+    opacity: 0%;
+  }
+
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}

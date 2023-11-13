@@ -1,0 +1,24 @@
+input[type="text"] {
+  outline: none !important;
+  transition: 1s;
+}
+
+input[type="text"]:focus {
+  color: white !important;
+}
+
+div {
+  transition: 1s;
+}
+
+div:focus-within {
+  border-bottom: white 1px solid !important;
+  width: 50% !important;
+}
+
+i {
+  transition: 1s;
+}
+input[type="text"]:focus ~ i {
+  color: white !important;
+}

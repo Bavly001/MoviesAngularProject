@@ -1,0 +1,17 @@
+<div class="overflow-hidden vh-100 w-100 d-flex justify-content-center align-items-center">
+
+  <div class="row row-cols-6 g-2 rotated">
+    <div *ngFor="let movie of moviesList; index as i" class="col overflow-hidden">
+      <img src='{{movie.Poster}}' alt="{{movie.Title}}" class="w-100 popup"
+        [ngStyle]="{'--animation-time': (i+1*2)+'s'}">
+    </div>
+    <div *ngFor="let movie of moviesList; index as i" class="col overflow-hidden">
+      <img src='{{movie.Poster}}' alt="{{movie.Title}}" class="w-100 popup"
+        [ngStyle]="{'--animation-time': (i+2*2)+'s'}">
+    </div>
+    <div *ngFor="let movie of moviesList; index as i" class="col overflow-hidden">
+      <img src='{{movie.Poster}}' alt="{{movie.Title}}" class="w-100 popup"
+        [ngStyle]="{'--animation-time': (i+3*2)+'s'}">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+.mode {
+  mix-blend-mode: screen;
+  filter: invert(1) grayscale(1) contrast(2);
+}

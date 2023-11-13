@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="body-height w-100 text-light d-flex justify-content-center align-items-center pt-3">
+  <div class="w-75 h-100 d-flex justify-content-center align-items-center">
+
+    <img src="https://jillmarbach.com/assets/icon-gif.gif" alt="image-error" class="w-25 image-error">
+    <div class="d-flex justify-content-center flex-column ms-5 w-50">
+
+      <h2 class="display-4 fw-bold text-warning m-0">
+        Oops!
+      </h2>
+      <h2 class="display-6 fw-bold mt-4 text-uppercase">
+        404 - Page is not found
+      </h2>
+      <h2 class="fs-5 mb-4 fw-light">
+        The page you are for might have been removed, had its name or is temporarily unavailable.
+      </h2>
+      <button [routerLink]="'/movies'"
+        class="w-100 btn btn-warning rounded-pill btn-lg w-50 px-3 py-2 d-flex justify-content-center align-items-center">
+        Explore More <mat-icon><span class="material-symbols-outlined ms-1 ">
+            arrow_forward
+          </span></mat-icon>
+      </button>
+    </div>
+  </div>
+
+</div>

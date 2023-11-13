@@ -1,0 +1,25 @@
+  <div
+    class="card w-100 bg-dark d-flex justify-content-center align-items-center flex-column 
+    rounded-5 position-relative overflow-hidden text-light px-2 overflow-hidden border border-1 border-dark-subtle shadow" #card>
+    <img src={{movie.Poster}} alt="{{movie.Title}} poster" class="position-absolute blurred-img">
+    <div class="h-100 z-3 d-flex pt-4 align-items-center flex-column position-relative">
+      <div class="img-frame overflow-hidden d-flex justify-content-center align-items-center rounded-5">
+        <img src={{movie.Poster}} alt="{{movie.Title}} poster" class="h-100 rounded-4">
+      </div>
+      <div class="pt-4 text-center title">
+        <h2 class="m-0 fs-4">{{movie.Title}} <span class="text-warning fw-light">({{movie.Year}})</span></h2>
+        <p class="mt-2 fs-6 fw-light">{{movie.Genre}}</p>
+      </div>
+      <div class="position-absolute description d-flex flex-column justify-content-end">
+        <p class="fw-bold">{{movie.Plot}}</p>
+        <p class="fw-light"><span class="text-warning">Actors:</span> {{movie.Actors}}
+          <span class="text-warning">Duration:</span> {{movie.Runtime}}
+          <span class="text-warning">Director:</span> {{movie.Director}}
+          <span class="text-warning">Writer:</span> {{movie.Writer}}</p>
+        <button class="btn btn-warning mb-3 rounded-pill" (click)="movieRouteNavigator(movie.imdbID, card)">
+          More info...
+        </button>
+      </div>
+    </div>
+
+  </div>

@@ -1,0 +1,7 @@
+.circle{
+      width: 40px;
+      height: 40px;
+}
+.appear{
+      animation: appear 1s ease-in-out;
+}

@@ -1,0 +1,30 @@
+.rounded-img {
+  border-bottom-right-radius: 150px;
+  border-top-left-radius: 150px;
+}
+
+.flying-motion {
+  animation: flying-motion var(--flying-time) ease-in-out infinite;
+}
+
+.appear{
+  animation: appear 1s ease-in-out;
+}
+
+@keyframes flying-motion {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

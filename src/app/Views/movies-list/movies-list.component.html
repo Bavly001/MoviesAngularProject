@@ -1,0 +1,21 @@
+<app-header [animated]="animated"></app-header>
+<div class="body-height w-100 text-light d-flex justify-content-center align-items-center pt-3 appear"
+  style="--appearance-time: {{animationTime()}}s">
+  <div class="w-75">
+    <div class="row row-cols-3 gy-5 align-items-center justify-content-start pb-5">
+      <div class="col-12">
+        <div class="w-100 d-flex justify-content-between align-items-center">
+          <h1 class="display-6 m-0">Movies List</h1>
+          <div class="w-75">
+            <app-search-bar [sendSearchValue]="onSearch" class="w-100 d-flex justify-content-end align-items-center">
+            </app-search-bar>
+          </div>
+        </div>
+      </div>
+      <div class="col" *ngFor="let movie of moviesList">
+        <app-card [movie]="movie"></app-card>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

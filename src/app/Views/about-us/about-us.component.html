@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="body-height w-100 text-light d-flex justify-content-center align-items-center appear">
+  <div class="w-75">
+    <div class="row row-cols-2">
+      <div class="col">
+        <img src="../../../assets/about-us-pic.jpg" alt="my-pic" class="w-75 rounded-img shadow-lg flying-motion"
+          style="--flying-time: 20s">
+      </div>
+      <div class="col d-flex flex-column justify-content-center flying-motion" style="--flying-time: 25s">
+        <h2 class="display-4 fw-light mx-0">Hey, I'm <span class="fw-bolder">Bavly</span> Ashraf</h2>
+        <div class="w-100">
+          <p class="fs-5 fw-light">
+            I am a skilled Frontend developer with more than 3+ years of self-learning. I created this project as a
+            practice on Angular. I also have extensive experience in React. Added to this are the design skills that
+            make
+            me friendly with the use of colors
+          </p>
+
+          <p class="mt-5 fs-4 fw-light">
+            If you're interested you can contact us now
+          </p>
+          <button class="btn btn-warning rounded-pill w-100" [routerLink]="'/contact-us'">
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

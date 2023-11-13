@@ -1,0 +1,57 @@
+<div class="position-relative h-100 w-100 overflow-hidden">
+  <div class="position-absolute w-100 h-100 z-3 d-flex justify-content-center align-items-center">
+    <div
+      class="w-75 h-75 border border-dark border-1 rounded-5 glass-effect d-flex justify-content-center align-items-center popup"
+      #frame>
+      <div class="w-100 h-75 d-flex justify-content-center align-items-center flex-column appear" #components
+        *ngIf="auth; else form">
+
+        <app-logo borderColor="warning"></app-logo>
+        <div class="w-75 h-75 d-flex justify-content-center flex-column text-center">
+          <h1 class="fs-1 text-light fw-bold">Don't Miss the Chance</h1>
+          <h1 class="fs-4 fw-light text-light ">A collection of your favorite movies in one place</h1>
+        </div>
+        <button
+          class="btn btn-warning rounded-pill btn-lg w-50 px-3 py-2 d-flex justify-content-center align-items-center"
+          (click)="exploreMore('movies',frame, components)">
+          Explore More <mat-icon><span class="material-symbols-outlined ms-1 ">
+              arrow_forward
+            </span></mat-icon>
+        </button>
+      </div>
+      <ng-template #form>
+        <form (ngSubmit)="onSubmit(myForm,frame,components)"
+          class="w-100 h-75 d-flex justify-content-center align-items-center flex-column appear" #components
+          #myForm="ngForm">
+          <app-logo borderColor="warning"></app-logo>
+          <div class="w-75 h-75 d-flex justify-content-around align-items-center flex-column">
+            <input type="email" placeholder="E-mail" name="email" #email='ngModel' ngModel
+              class="w-75 p-3 border text-light bg-transparent rounded-pill"
+              [ngClass]="{'border-warning': email.invalid && email.touched, 'border-light':!email.invalid && !email.touched}"
+              required email>
+            <sup class="text-warning" *ngIf="email.invalid && email.touched">
+              *Invalid Email
+            </sup>
+
+
+            <input type="password" placeholder="Password" name="password" #password='ngModel' ngModel
+              class="w-75 p-3 border text-light bg-transparent rounded-pill"
+              [ngClass]="{'border-warning': password.invalid && password.touched, 'border-light':!password.invalid && !password.touched}"
+              required>
+            <sup class="text-warning" *ngIf="password.invalid && password.touched">
+              *Invalid Password
+            </sup>
+
+          </div>
+          <button [disabled]="!myForm.valid"
+            class="btn btn-warning rounded-pill btn-lg w-25 px-3 py-2 d-flex justify-content-center align-items-center"
+            type="submit">
+            Login
+          </button>
+        </form>
+      </ng-template>
+
+    </div>
+  </div>
+  <app-images-pop-up></app-images-pop-up>
+</div>

@@ -1,0 +1,25 @@
+<div class="w-100 position-sticky top-0 header d-flex justify-content-center align-items-center">
+  <div class="w-75 py-3 shadow rounded-pill header-container" [ngClass]="{'header-popup': animated }">
+    <div class="row row-cols-3 justify-content-center align-items-center w-100"
+      [ngClass]="{'header-appear': animated }">
+      <div class="col d-flex justify-content-around align-items-center">
+        <button class="btn btn-outline-light btn-lg rounded-pill" (click)="navigator('home') ">Home</button>
+        <button class="btn btn-outline-light btn-lg rounded-pill"
+          [ngClass]="{'btn-warning text-dark border-dark' : activeRoute('movies')}"
+          (click)="navigator('movies')">Movies</button>
+      </div>
+      <div class="col d-flex justify-content-center align-items-center">
+        <app-logo class="cursor-pointer" size="100" fontSize="5" borderColor="warning" (click)="navigator('')">
+        </app-logo>
+      </div>
+      <div class="col d-flex justify-content-around align-items-center">
+        <button class="btn btn-outline-light btn-lg rounded-pill"
+          [ngClass]="{'btn-warning text-dark border-dark' : activeRoute('about-us')}"
+          (click)="navigator('about-us')">About Us</button>
+        <button class="btn btn-outline-light btn-lg rounded-pill"
+          [ngClass]="{'btn-warning text-dark border-dark' : activeRoute('contact-us')}"
+          (click)="navigator('contact-us')">Contact Us</button>
+      </div>
+    </div>
+  </div>
+</div>

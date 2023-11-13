@@ -1,0 +1,3 @@
+.appear {
+  animation: appear var(--appearance-time) ease-in-out;
+}
